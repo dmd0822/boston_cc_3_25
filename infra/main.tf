@@ -4,7 +4,7 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "rg" {
-  name = "rg-cc-3-25"
+  name = "rg-cc-3-29-25"
 }
 
 resource "azurerm_app_service_plan" "asp" {
