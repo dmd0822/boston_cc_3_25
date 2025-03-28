@@ -38,6 +38,14 @@ jobs:
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+    - name: Check if publish_output folder exists
+      run: |
+        if [ ! -d "../publish_output" ]; then
+          echo "Error: publish_output folder does not exist."
+          exit 1
+        fi
+      working-directory: src/BlazorApp
+
     - name: Deploy to Azure Web App
       run: |
         az webapp deploy --resource-group rg-cc-3-29-25 \
