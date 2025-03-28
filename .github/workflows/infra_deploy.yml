@@ -40,6 +40,5 @@ jobs:
       working-directory: infra
 
     - name: Apply Terraform
-      if: github.event_name == 'push'
       run: terraform apply -auto-approve tfplan
       working-directory: infra
