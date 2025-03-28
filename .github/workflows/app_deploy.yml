@@ -42,4 +42,5 @@ jobs:
       run: |
         az webapp deploy --resource-group rg-cc-3-29-25 \
                          --name blazor-app-service \
-                         --src-path publish_output
+                         --src-path ../publish_output
+      working-directory: src/BlazorApp
