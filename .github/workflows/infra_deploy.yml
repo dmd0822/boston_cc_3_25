@@ -31,10 +31,13 @@ jobs:
 
     - name: Initialize Terraform
       run: terraform init -backend-config="storage_account_name=satfstateccdemodmd" -backend-config="container_name=tfstatecontainer" -backend-config="key=demetfstate"
+      working-directory: infra
 
     - name: Plan Terraform
       run: terraform plan -out=tfplan
+      working-directory: infra
 
     - name: Apply Terraform
       if: github.event_name == 'push'
       run: terraform apply -auto-approve tfplan
+      working-directory: infra
