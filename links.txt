@@ -1,0 +1,6 @@
+Repo - https://github.com/dmd0822/boston_cc_3_25
+Copilot -  https://copilot.microsoft.com
+M365 Copilot -  https://www.microsoft.com/en-us/microsoft-365/copilot/meet-copilot
+GitHub Copilot - https://github.com/features/copilot
+GitHub Actions - https://learn.microsoft.com/en-us/azure/app-service/deploy-github-actions
+
