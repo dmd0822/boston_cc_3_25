@@ -38,9 +38,9 @@ jobs:
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-    - name: List files in the working directory
-      run: ls -la
-      working-directory: src/
+    - name: Set permissions for publish_output
+      run: chmod -R 777 ../publish_output
+      working-directory: src/BlazorApp
 
     - name: Deploy to Azure Web App
       run: |
