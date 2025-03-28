@@ -21,11 +21,11 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore src/BlazorApp.csproj
-      working-directory: src
+      working-directory: src/BlazorApp
 
     - name: Build the application
       run: dotnet publish -c Release -o ../publish_output
-      working-directory: src
+      working-directory: src/BlazorApp
 
     - name: Login to Azure
       uses: azure/login@v2
