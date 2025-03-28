@@ -288,5 +288,10 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
 
 credential.json
