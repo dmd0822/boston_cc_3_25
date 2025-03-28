@@ -15,14 +15,16 @@ resource "azurerm_service_plan" "asp" {
   sku_name  = "F1"
 }
 
-resource "azurerm_app_service" "app" {
+resource "azurerm_linux_web_app" "app" {
   name                = "blazor-app-service"
   location            = data.azurerm_resource_group.rg.location
   resource_group_name = data.azurerm_resource_group.rg.name
-  app_service_plan_id = azurerm_service_plan.asp.id
+  service_plan_id     = azurerm_service_plan.asp.id
 
   site_config {
-    dotnet_framework_version = "v6.0"
+    application_stack {
+      dotnet_version = "6.0"
+    }
   }
 
   app_settings = {
